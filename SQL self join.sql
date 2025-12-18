@@ -13,3 +13,11 @@ SELECT
 FROM parent a
 LEFT JOIN parent b
     ON a.referred_by_id = b.id;
+
+SELECT
+    a.id,
+    a.name AS user_name,
+    b.name AS referred_by_name
+FROM parent a
+right JOIN parent b
+    ON a.referred_by_id = b.id;
